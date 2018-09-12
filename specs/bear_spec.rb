@@ -41,10 +41,10 @@ def test_bear_eats_fish__2
   @river.fish_enters_river(@fish3)
   @bear.eat_fish(@fish1)
   @bear.eat_fish(@fish2)
-  # @river.fish_leaves_river(@fish1)
-  # @river.fish_leaves_river(@fish2)
+  @river.fish_leaves_river(@fish1)
+  @river.fish_leaves_river(@fish2)
   assert_equal(2, @bear.stomach_count)
-  # assert_equal(1, @river.count_fish)
+  assert_equal(1, @river.count_fish)
 end
 
 def test_bear_roars
